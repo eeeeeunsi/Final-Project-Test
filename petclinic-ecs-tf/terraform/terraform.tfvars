@@ -1,0 +1,8 @@
+aws_region="us-east-1"
+stack="bob-ecr-test-petclinic"
+fargate-task-service-role="bob-fargate-task-scv-role"
+aws_ecr="petclinic"
+aws_profile="default"
+source_repo_name="petclinic"
+source_repo_branch="master"
+image_repo_name="petclinic"
