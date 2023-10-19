@@ -8,5 +8,5 @@
   
 **Role**
 - 팀장
-- CICD
+- CI/CD
 - IAM
