@@ -1,5 +1,5 @@
 variable "mycount" {
-  default = 2
+  default = 4
 }
 
 variable "aws_vpc" {
