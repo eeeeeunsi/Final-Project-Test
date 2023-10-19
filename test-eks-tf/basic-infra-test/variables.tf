@@ -1,5 +1,5 @@
 variable "mycount" {
-  default = 4
+  default = 2
 }
 
 variable "aws_vpc" {
@@ -15,8 +15,3 @@ variable "aws_cidr" {
     "vpc-devt-projx" = "10.4.0.0/16"
   }
 }
-
-
-
-
-
