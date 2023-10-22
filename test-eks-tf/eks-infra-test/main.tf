@@ -7,14 +7,16 @@ module "vpc" {
       cidr = "10.0.1.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "test-public-subnet-2a"
+        Name = "test-public-subnet-2a",
+        Madeby = "Terraform"
       }
     },
     "subnet_b1" = {
       cidr = "10.0.11.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "test-public-subnet-2c"
+        Name = "test-public-subnet-2c",
+        Madeby = "Terraform"
       }
     }
   }
@@ -23,14 +25,16 @@ module "vpc" {
       cidr = "10.0.2.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "test-private-subnet-2a"
+        Name = "test-private-subnet-2a",
+        Madeby = "Terraform"
       }
     },
     "subnet_b1" = {
       cidr = "10.0.22.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "test-private-subnet-2a"
+        Name = "test-private-subnet-2c",
+        Madeby = "Terraform"
       }
     }
   }
@@ -47,14 +51,14 @@ module "eks" {
   endpoint_public_access  = true
   managed_node_groups = {
     "managed-node-group-a" = {
-      node_group_name = "prod-node-group",
-      instance_types  = ["t2.micro"],
+      node_group_name = "test-node-group",
+      instance_types  = ["t3.medium"],
       capacity_type   = "ON_DEMAND",
       release_version = "" #latest
       disk_size       = 10
-      desired_size    = 1,
-      max_size        = 1,
-      min_size        = 1
+      desired_size    = 2,
+      max_size        = 3,
+      min_size        = 2
     }
   }
   aws_auth_admin_roles = ["arn:aws:iam::560971842042:role/eks-admin-role"]
