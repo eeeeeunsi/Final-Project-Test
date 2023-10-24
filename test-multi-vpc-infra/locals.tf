@@ -1,18 +1,22 @@
 locals {
-  region = "ap-northeast-2"
-  azs    = ["ap-northeast-2a", "ap-northeast-2c"]
-
-  common_tags = {
-    ManagedBy = "Terraform"
-    Project   = "BoB-Final"
+  azs  = var.azs
+  vpcs = var.vpcs
+  
+  public_subnet_cidrs = {
+    for vpc_key, vpc_cidr in local.vpcs : vpc_key => [
+      for i in range(var.public_subnet_count) : cidrsubnet(vpc_cidr, 8, i)
+    ]
   }
 
-  dev-name  = "dev"
-  prd-name  = "prd"
-  mgmt-name = "mgmt"
+  private_subnet_cidrs = {
+    for vpc_key, vpc_cidr in local.vpcs : vpc_key => [
+      for i in range(var.private_subnet_count) : cidrsubnet(vpc_cidr, 8, i + var.public_subnet_count)
+    ]
+  }
 
-  dev-cidr  = "10.10.0.0/16"
-  prd-cidr  = "10.20.0.0/16"
-  mgmt-cidr = "10.30.0.0/16"
-
+  database_subnet_cidrs = {
+    for vpc_key, vpc_cidr in local.vpcs : vpc_key => [
+      for i in range(var.database_subnet_count) : cidrsubnet(vpc_cidr, 8, i + var.public_subnet_count + var.private_subnet_count)
+    ]
+  }
 }

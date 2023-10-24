@@ -9,7 +9,7 @@ terraform {
 }
 
 provider "aws" {
-  region                   = local.region
+  region                   = var.region
   shared_credentials_files = var.credential_files
   profile                  = var.profile
 }
