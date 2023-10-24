@@ -219,7 +219,7 @@ module "staging-eks" {
   vpc_id                  = module.staging-vpc.vpc_id
   private_subnets_ids     = module.staging-vpc.private_subnets_ids
   endpoint_prviate_access = true
-  endpoint_public_access  = true
+  endpoint_public_access  = true #false -> configure-map 설정 변경 불가
   managed_node_groups = {
     "managed-node-group-a" = {
       node_group_name = "staging-node-group",
