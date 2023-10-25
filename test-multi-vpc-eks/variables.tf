@@ -18,24 +18,30 @@ variable "profile" {
 
 variable "bastion_intance_type" {
   description = "The instance type for bastion"
-  type = string
-  default = "t2.micro"
+  type        = string
+  default     = "t2.micro"
 }
 
 variable "bastion_key_name" {
   description = "Name of the SSH keypair to use in AWS."
-  type = string
-  default = "test"
+  type        = string
+  default     = "test"
 }
 
 variable "mgmt_intance_type" {
   description = "The instance type for bastion"
-  type = string
-  default = "t2.micro"
+  type        = string
+  default     = "t3.small"
 }
 
 variable "mgmt_key_name" {
   description = "Name of the SSH keypair to use in AWS."
-  type = string
-  default = "test"
+  type        = string
+  default     = "test"
+}
+
+variable "eks_node_intance_type" {
+  description = "The instance type for bastion"
+  type        = string
+  default     = "t2.micro"
 }
