@@ -10,18 +10,18 @@ module "prd-vpc" {
       cidr = "10.10.1.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "PRD-public-subnet-2a",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "PRD-public-subnet-2a",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_b1" = {
       cidr = "10.10.11.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "PRD-public-subnet-2c",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "PRD-public-subnet-2c",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     }
   }
@@ -30,36 +30,36 @@ module "prd-vpc" {
       cidr = "10.10.2.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "PRD-private-subnet-2a",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "PRD-private-subnet-2a",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_a2" = {
       cidr = "10.10.3.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "PRD-database-subnet-2a",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "PRD-database-subnet-2a",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_b1" = {
       cidr = "10.10.22.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "PRD-private-subnet-2c",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "PRD-private-subnet-2c",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_b2" = {
       cidr = "10.10.23.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "PRD-database-subnet-2c",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "PRD-database-subnet-2c",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     }
   }
@@ -77,18 +77,18 @@ module "staging-vpc" {
       cidr = "10.20.1.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "STAGING-public-subnet-2a",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "STAGING-public-subnet-2a",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_b1" = {
       cidr = "10.20.11.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "STAGING-public-subnet-2c",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "STAGING-public-subnet-2c",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     }
   }
@@ -97,36 +97,36 @@ module "staging-vpc" {
       cidr = "10.20.2.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "STAGING-private-subnet-2a",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "STAGING-private-subnet-2a",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_a2" = {
       cidr = "10.20.3.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "STAGING-database-subnet-2a",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "STAGING-database-subnet-2a",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_b1" = {
       cidr = "10.20.22.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "STAGING-private-subnet-2c",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "STAGING-private-subnet-2c",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_b2" = {
       cidr = "10.20.23.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "STAGING-database-subnet-2c",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "STAGING-database-subnet-2c",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     }
   }
@@ -144,18 +144,18 @@ module "mgmt-vpc" {
       cidr = "10.30.1.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "MGMT-public-subnet-2a",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "MGMT-public-subnet-2a",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_b1" = {
       cidr = "10.30.11.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "MGMT-public-subnet-2c",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "MGMT-public-subnet-2c",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     }
   }
@@ -164,18 +164,18 @@ module "mgmt-vpc" {
       cidr = "10.30.2.0/24",
       az   = "ap-northeast-2a",
       tags = {
-        Name = "MGMT-private-subnet-2a",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "MGMT-private-subnet-2a",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     },
     "subnet_b1" = {
       cidr = "10.30.22.0/24",
       az   = "ap-northeast-2c",
       tags = {
-        Name = "MGMT-private-subnet-2c",
-        Madeby = "Terraform"
-        Project   = "BoB-Final"
+        Name    = "MGMT-private-subnet-2c",
+        Madeby  = "Terraform"
+        Project = "BoB-Final"
       }
     }
   }
@@ -185,8 +185,7 @@ module "mgmt-vpc" {
 # PRD-EKS
 ################################################################################
 module "prd-eks" {
-  source = "./module/eks"
-
+  source                  = "./module/eks"
   eks_name                = "prd-eks"
   eks_version             = "1.27"
   vpc_id                  = module.prd-vpc.vpc_id
@@ -196,7 +195,7 @@ module "prd-eks" {
   managed_node_groups = {
     "managed-node-group-a" = {
       node_group_name = "prd-node-group",
-      instance_types  = ["t3.medium"],
+      instance_types  = [var.eks_node_intance_type],
       capacity_type   = "ON_DEMAND",
       release_version = "" #latest
       disk_size       = 10
@@ -223,7 +222,7 @@ module "staging-eks" {
   managed_node_groups = {
     "managed-node-group-a" = {
       node_group_name = "staging-node-group",
-      instance_types  = ["t3.medium"],
+      instance_types  = [var.eks_node_intance_type],
       capacity_type   = "ON_DEMAND",
       release_version = "" #latest
       disk_size       = 10
