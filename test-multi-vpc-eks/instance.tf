@@ -2,7 +2,7 @@
 # Bastion instance
 #######################
 resource "aws_instance" "bastion" {
-  ami             = data.aws_ami.amazon_linux.id
+  ami             = coalesce(var.image_id, data.aws_ami.amzn2.id)
   instance_type   = var.bastion_intance_type
   security_groups = [aws_security_group.bastion_sg.id]
 
@@ -14,9 +14,9 @@ resource "aws_instance" "bastion" {
     Name = "bastion"
   }
 
-  depends_on = [ 
-    module.prd-eks, 
-    module.staging-eks 
+  depends_on = [
+    module.prd-eks,
+    module.staging-eks
   ]
 }
 
@@ -39,11 +39,11 @@ resource "aws_security_group" "bastion_sg" {
 # Mgmt instance
 #######################
 resource "aws_instance" "mgmt" {
-  ami             = data.aws_ami.amazon_linux.id
+  ami             = coalesce(var.image_id, data.aws_ami.amzn2.id)
   instance_type   = var.mgmt_intance_type
   security_groups = [aws_security_group.mgmt_sg.id]
 
-  subnet_id                   = module.mgmt-vpc.public_subnets_ids[0]
+  subnet_id                   = module.mgmt-vpc.private_subnets_ids[0]
   associate_public_ip_address = false
   key_name                    = var.mgmt_key_name
 
@@ -53,9 +53,12 @@ resource "aws_instance" "mgmt" {
     Name = "mgmt"
   }
 
-  depends_on = [ 
-    module.prd-eks, 
-    module.staging-eks 
+  depends_on = [
+    module.prd-eks,
+    module.staging-eks,
+    module.mgmt-vpc,
+    module.prd-vpc,
+    module.staging-vpc
   ]
 }
 
