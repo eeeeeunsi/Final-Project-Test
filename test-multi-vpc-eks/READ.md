@@ -39,7 +39,7 @@ kubectl get all
 ```
 
 6. alb-ingress-controller.sh 다운로드 및 설치  
-[alb-ingress-controller.sh]()
+[alb-ingress-controller.sh](./alb-ingress-controller.sh)
 ```sh
 chmod +x alb-ingress-controller.sh
 # 실행 전에 cluster name 변경해주기!
