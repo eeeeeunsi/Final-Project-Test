@@ -74,6 +74,6 @@ resource "aws_security_group" "cluster" {
   }
 
   tags = {
-    Name = "terraform-eks"
+    Name = "eks-sg"
   }
 }
