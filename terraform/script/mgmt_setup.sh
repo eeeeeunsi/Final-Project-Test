@@ -49,3 +49,9 @@ fi
 # ec2-user를 Docker 그룹에 추가
 sudo usermod -aG docker ec2-user
 echo "ec2-user를 Docker 그룹에 추가했습니다."
+
+# k9s 설치
+mkdir k9s; cd k9s
+wget https://github.com/derailed/k9s/releases/download/v0.26.7/k9s_Linux_x86_64.tar.gz
+tar zxvf k9s_Linux_x86_64.tar.gz
+sudo mv k9s /usr/local/bin/k9s
