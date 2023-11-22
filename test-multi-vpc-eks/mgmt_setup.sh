@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# unzip 설치
+# tool 설치
 sudo yum install -y unzip
+sudo yum install -y git
 
 # AWS CLI v2 설치
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"

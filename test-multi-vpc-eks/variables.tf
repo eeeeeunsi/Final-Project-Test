@@ -43,10 +43,11 @@ variable "mgmt_key_name" {
 variable "image_id" {
   description = "The image id of AMI using EC2"
   type = string
+   default = ""
 }
 
 variable "eks_node_intance_type" {
-  description = "The instance type for bastion"
+  description = "The instance type for eks node"
   type        = string
   default     = "t2.micro"
 }

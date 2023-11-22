@@ -29,3 +29,6 @@ helm upgrade -i aws-load-balancer-controller eks/aws-load-balancer-controller \
   --set serviceAccount.create=false \
   --set serviceAccount.name=aws-load-balancer-controller \
   -n kube-system
+
+# alb controller 설치 확인
+kubectl get deployment -n kube-system aws-load-balancer-controller
